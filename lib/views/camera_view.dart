@@ -18,11 +18,15 @@ class CameraView extends StatelessWidget {
                   children: [
                     CameraPreview(controller.cameraController),
                     Positioned(
-                      top : controller.y * 700,
-                      right: controller.x * 500,
+                      // top : (controller.y) * 700,
+                      // right: (controller.x) * 500,
+                      // top : 100,
+                      // right: 500,
                       child: Container(
-                      width: (controller.w * 100 * context.width / 100),
-                      height: (controller.h * 100 * context.height / 100),
+                      // width: controller.w * 100 * context.width / 100,
+                      // height: controller.h * 100 * context.height / 100,
+                      width: 300,
+                      height: 200,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
                         border: Border.all(color: Colors.deepOrange,width: 4.0),

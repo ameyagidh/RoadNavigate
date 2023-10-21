@@ -78,14 +78,16 @@ class ScanController extends GetxController {
     );
     if(detector != null){
       var objectDetected = detector.first;
-      if(detector.first["confidenceInClass"]*100 > 45) {
-        // print("object detected is $detector");
+      // if (objectDetected["confidenceInClass"] != null &&
+      //     objectDetected["confidenceInClass"] * 100 > 0)  {
+        print("object detected is $detector");
         label = detector.first["detectedClass"].toString();
+        print(label);
         h = objectDetected['rect']["h"];
         w = objectDetected['rect']["w"];
         x = objectDetected['rect']["x"];
         y = objectDetected['rect']["y"];
-      }
+      // }
       update();
     }
   }
