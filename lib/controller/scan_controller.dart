@@ -23,6 +23,8 @@ class ScanController extends GetxController {
 
   late List<CameraDescription> cameras;
   var cameraCount = 0;
+  var x,y,w,h = 0.0;
+  var label = "";
   var isCameraInitialized = false.obs;
 
   initCamera() async {
@@ -75,7 +77,16 @@ class ScanController extends GetxController {
       threshold: 0.4,
     );
     if(detector != null){
-      print("object detected is $detector");
+      var objectDetected = detector.first;
+      if(detector.first["confidenceInClass"]*100 > 45) {
+        // print("object detected is $detector");
+        label = detector.first["detectedClass"].toString();
+        h = objectDetected['rect']["h"];
+        w = objectDetected['rect']["w"];
+        x = objectDetected['rect']["x"];
+        y = objectDetected['rect']["y"];
+      }
+      update();
     }
   }
 }
