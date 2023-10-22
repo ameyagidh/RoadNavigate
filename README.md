@@ -1,7 +1,5 @@
 # Road Navigate App with Real-Time Object Detection
 
-![App Preview](app_preview.png)
-
 This is a road navigation application that utilizes real-time object detection using Convolutional Neural Networks (CNN). The app is developed with TensorFlow Lite, Flutter, and Dart, making it compatible with both iOS and Android systems. It serves as a portable solution to enhance road safety and awareness. Additionally, it can act as a secondary display when integrated with the vehicle's camera system.
 
 ## Features
