@@ -26,7 +26,7 @@ To install the application, follow these steps:
 1. Clone this GitHub repository:
 
    ```bash
-   git clone https://github.com/your-username/road-navigate-app.git
+   git clone https://github.com/ameyagidh/RoadNavigate.git
    ```
 
 2. Change to the project directory:
